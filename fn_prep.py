@@ -8,10 +8,10 @@ def pick_your_color():
     while your_color != 'chosen':
         if your_color == 'B':
             your_color = 'chosen'
-            you = BlackPlayer()
+            you = BlackPlayer('you')
         elif your_color == 'W':
             your_color = 'chosen'
-            you = WhitePlayer()
+            you = WhitePlayer('you')
         else:
             print(your_color)
             your_color = input("Sorry, the choice has to be B or W. Try again.")
@@ -23,9 +23,9 @@ def pick_your_color():
 
 def set_the_enemy(you):
     if isinstance(you, BlackPlayer):
-        enemy = WhitePlayer()
+        enemy = WhitePlayer('enemy')
     else:
-        enemy = BlackPlayer()
+        enemy = BlackPlayer('enemy')
 
     enemy.show_enemy()
 

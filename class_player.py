@@ -2,9 +2,10 @@ import random
 
 
 class Player:
-    def __init__(self):
+    def __init__(self, name):
         self.__idx = 0
         self.__order = None
+        self.__name = name
 
 
     @property
@@ -15,6 +16,16 @@ class Player:
     @order.setter
     def order(self, n):
         self.__order = n
+
+
+    @property
+    def name(self):
+        return self.__name
+    
+
+    @name.setter
+    def name(self, name):
+        self.__name = name
 
 
     @property
@@ -47,7 +58,7 @@ class Player:
 
     def roll_the_dice(self):
         dice_number = random.randrange(1, 7)
-        print("The dice number of " + self.icon + ": " + str(dice_number))
+        print("The dice number of " + self.name + ": " + str(dice_number))
 
         return dice_number
 
@@ -57,8 +68,8 @@ class Player:
 
 
 class WhitePlayer(Player):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name):
+        super().__init__(name)
 
 
     @property
@@ -67,8 +78,8 @@ class WhitePlayer(Player):
 
 
 class BlackPlayer(Player):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name):
+        super().__init__(name)
 
 
     @property
