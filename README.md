@@ -1,4 +1,6 @@
 # 소개
+![image](https://github.com/YunOh21/simple_game/assets/86283716/1f53b66d-0159-4e91-94a4-25cd3e74aec2)
+
 - 파이썬 클래스 개념 실습용 미니 프로젝트입니다.
 - 부루마블 류의 보드게임을 상정해서 만들었습니다.
 
